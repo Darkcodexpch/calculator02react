@@ -1,13 +1,131 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300;1,500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    font-size: 62.2%;
 }
+
+:root {
+    --bodybg: #a9bcd0;
+    --calcbg: #303032;
+    --evnbtn: #A9BCD0;
+    --oddbtn: #373F51;
+}
+
+body {
+    background-color: var(--bodybg);
+    height: 100vh;
+}
+
+/* container styling */
+.container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--calcbg);
+    max-width: 500px;
+    max-height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.calcbutton {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.calcbutton>button {
+    padding: 0 2rem;
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--calcbg);
+    border: 1px solid transparent;
+    color: var(--evnbtn);
+    transition: all .3s;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+}
+
+.calcbutton>button:hover {
+    border: 1px solid var(--evnbtn);
+}
+
+.btn-a {
+    flex-grow: 1;
+    margin: 0 2px;
+    text-align: center;
+}
+
+.btn-b {
+    flex-grow: 1;
+    margin: 0 2px;
+    text-align: center;
+
+
+}
+
+.btn-c {
+    flex-grow: 3;
+    margin: 0 2px;
+    text-align: center;
+
+
+}
+
+.res,
+.output {
+    margin: .1rem 0;
+    padding: 1rem;
+    width: 99%;
+}
+
+.res>input,
+.output>input {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 90%;
+        height: 90%;
+        padding: 2rem;
+    }
+    .calcbutton > button{
+        width: 6rem;
+        height: 6rem;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 400px) {
+.container{
+    width: 80%;
+    height: 100%;
+}
+.calcbutton {
+    margin: 1.8rem 0;
+}
+ .calcbutton>button{
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+ } 
+    /* CSS */
+    
+}  
